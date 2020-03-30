@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Random;
 
-public class Square extends Figures {
+public class Square extends Figure {
     Random random = new Random();
     private double diagonal;
     private double area;

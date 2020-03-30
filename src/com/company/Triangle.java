@@ -4,20 +4,23 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Random;
 
-public class Triangle extends Figures {
+public class Triangle extends Figure {
     Random random = new Random();
     private double hypotenuse;
     private double a;
+    private double b;
 
     Triangle(){
         double a1 = random.nextDouble()*10 + 1;
         a = new BigDecimal(a1).setScale(2, RoundingMode.UP).doubleValue();
+        double b1 = random.nextDouble()*10 + 1;
+        b = new BigDecimal(b1).setScale(2, RoundingMode.UP).doubleValue();
         hypotenuse = getHypotenuse();
     }
 
     @Override
     String draw() {
-        String systemOut = "Фигура триугольник" + " Площадь " + getArea() + " гипотенуза " + getHypotenuse() +
+        String systemOut = "Фигура треугольник" + " Площадь " + getArea() + " гипотенуза " + getHypotenuse() +
                 " цвет " + getColor();
         System.out.println(systemOut);
         return systemOut;
@@ -25,8 +28,8 @@ public class Triangle extends Figures {
 
     @Override
     double getArea() {
-        double b = Math.sqrt(hypotenuse*hypotenuse - a*a);
-        double area1 = (a * b) / 2;
+        double b1 = a>b ? Math.sqrt(hypotenuse*hypotenuse - b*b) : Math.sqrt(hypotenuse*hypotenuse - a*a);
+        double area1 = a>b ? (b * b1)/2 : (a * b1)/2;
         double area = new BigDecimal(area1).setScale(2, RoundingMode.UP).doubleValue();
         return area;
     }
@@ -39,8 +42,7 @@ public class Triangle extends Figures {
     }
 
     double getHypotenuse() {
-        double hypotenuse0 = a + random.nextDouble()*10 + 1;
-        hypotenuse = new BigDecimal(hypotenuse0).setScale(1, RoundingMode.UP).doubleValue();
+        hypotenuse = a > b ? a : b;
         return hypotenuse;
     }
 

@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Random;
 
-public class Circle extends Figures {
+public class Circle extends Figure {
     Random random = new Random();
     private double radius;
     private double area;

@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Random;
 
-public class Trapeze extends Figures {
+public class Trapeze extends Figure {
     Random random = new Random();
     private double height;
     private double a;

@@ -3,9 +3,9 @@ package com.company;
 import java.util.Random;
 
 public class RandomFigures {
-    static public Figures randomFigures() {
+    static public Figure randomFigures() {
         Random randomFigures = new Random();
-        Figures figure;
+        Figure figure;
         switch (randomFigures.nextInt(4)) {
             case (0):
                 figure = new Circle();
