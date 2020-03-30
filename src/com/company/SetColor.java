@@ -8,7 +8,7 @@ public class SetColor {
     private String colorName;
 
     public String setColor(){
-        switch(random.nextInt(8)) {    // switch over 8 possible colors
+        switch(random.nextInt(8)) {    
             case (0):
                 colorName = "Red";
                 break;
