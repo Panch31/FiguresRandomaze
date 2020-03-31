@@ -17,7 +17,7 @@ public class Square extends Figure {
 
     @Override
     String draw() {
-        String systemOut = "Фигура квадрат "+ " Площадь " + getArea() + " диагональ " + getDiagonal()
+        String systemOut = "Фигура квадрат "+ " Площадь " + getArea() + " диагональ " + diagonal
                 + " цвет " + getColor();
         System.out.println(systemOut);
         return systemOut;

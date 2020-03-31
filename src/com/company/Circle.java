@@ -16,15 +16,15 @@ public class Circle extends Figure {
 
     @Override
     String draw() {
-        String systemOut = "Фигура круг" + " Площадь " + getArea() + " радиус " + getRadius() + " цвет " + getColor();
+        String systemOut = "Фигура круг" + " Площадь " + getArea() + " радиус " + radius + " цвет " + getColor();
         System.out.println(systemOut);
         return systemOut;
     }
 
     @Override
     double getArea() {
-        double area0 = Math.PI * radius * radius;
-        area = new BigDecimal(area0).setScale(2, RoundingMode.UP).doubleValue();
+        double area0 = Math.PI * (radius * radius);
+        area = new BigDecimal(area0).setScale(2, RoundingMode.HALF_UP).doubleValue();
         return area;
     }
 

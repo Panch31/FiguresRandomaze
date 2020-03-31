@@ -20,7 +20,7 @@ public class Triangle extends Figure {
 
     @Override
     String draw() {
-        String systemOut = "Фигура треугольник" + " Площадь " + getArea() + " гипотенуза " + getHypotenuse() +
+        String systemOut = "Фигура треугольник" + " Площадь " + getArea() + " гипотенуза " + hypotenuse +
                 " цвет " + getColor();
         System.out.println(systemOut);
         return systemOut;

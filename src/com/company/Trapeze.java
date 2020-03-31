@@ -20,7 +20,7 @@ public class Trapeze extends Figure {
 
     @Override
     String draw() {
-        String systemOut = "Фигура трапеция"+ " Площадь " + getArea() + " высота " + getHeight() + " цвет " + getColor();
+        String systemOut = "Фигура трапеция"+ " Площадь " + getArea() + " высота " + height + " цвет " + getColor();
         System.out.println(systemOut);
         return systemOut;
     }
